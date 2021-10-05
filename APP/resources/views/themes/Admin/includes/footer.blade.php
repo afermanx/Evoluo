@@ -6,7 +6,7 @@
         </div>
 
         <div class="col-lg-6 col-sm-6 col-md-6 text-right">
-            <p>Desenvolvido com  ❤️ <a href="#" target="_blank">pelo Acadêmicos Alex J. Ferman, Cleriston B. Santana, </a></p>
+            <p>Desenvolvido com  ❤️ <a href="#" target="_blank">pelo Acadêmicos Alex J. Ferman, Cleriston B. Santana, Thiago L. Duarte</a></p>
         </div>
     </div>
 </footer>
