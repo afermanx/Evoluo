@@ -10,13 +10,17 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+    protected $guard = "user";
+
+    protected $table = 'users';
+
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'cpf','email', 'password','status','type', 'image'
     ];
 
     /**
@@ -28,6 +32,8 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+
+
     /**
      * The attributes that should be cast to native types.
      *
@@ -36,4 +42,30 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    protected $username;
+    /**
+     * @var mixed'
+     */
+    private $id;
+
+
+
+    public function username()
+    {
+        return $this->cpf;
+    }
+
+    public function getAuthPassword() {
+
+        return $this->password;
+    }
+
+
+    public function list(){
+        $users=User::orderBy('id', 'DESC')->get();
+
+        return $users;
+    }
+
 }
